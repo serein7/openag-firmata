@@ -43,15 +43,8 @@
 
 #include <Servo.h>
 #include <Wire.h>
-#include <Firmata.h>
-
-// SoftwareSerial is only supported for AVR-based boards
-// The second condition checks if the IDE is in the 1.0.x series, if so, include SoftwareSerial
-// since it should be available to all boards in that IDE.
-#if defined(ARDUINO_ARCH_AVR) || (ARDUINO >= 100 && ARDUINO < 10500)
-#include <SoftwareSerial.h>
-#endif
-#include "utility/serialUtils.h"
+#include <ConfigurableFirmata.h>
+#include <SerialFirmata.h>
 
 #define I2C_WRITE                   B00000000
 #define I2C_READ                    B00001000
